@@ -1,0 +1,197 @@
+:root {
+    --avance-green: #68cf00;
+    --avance-dark: #111;
+    --avance-ink: #202620;
+    --avance-soft: #f4f6f1
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 100px
+}
+
+body {
+    padding-top: 86px !important;
+    font-family: Arial, Helvetica, sans-serif
+}
+
+.site-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 3000;
+    background: #101310;
+    box-shadow: 0 4px 20px #0003
+}
+
+.site-nav {
+    max-width: 1440px;
+    margin: auto;
+    min-height: 86px;
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    padding: 10px 3%
+}
+
+.site-brand {
+    display: flex;
+    align-items: center;
+    flex-shrink: 0
+}
+
+.site-brand img {
+    width: 165px;
+    height: 56px;
+    object-fit: contain;
+    border-radius: 4px
+}
+
+.site-links {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 19px;
+    flex: 1;
+    flex-wrap: wrap
+}
+
+.site-links a,
+.site-account a {
+    color: #f3f6f0;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 700;
+    transition: color .2s
+}
+
+.site-links a:hover,
+.site-links a[aria-current=page] {
+    color: var(--avance-green)
+}
+
+.site-account {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    white-space: nowrap
+}
+
+.site-account .site-register {
+    background: var(--avance-green);
+    color: #111;
+    padding: 12px 15px;
+    border-radius: 9px
+}
+
+.site-account .site-register:hover {
+    background: #9cff33;
+    color: #111
+}
+
+body main {
+    margin-top: 0 !important
+}
+
+.partner-promo {
+    text-align: center;
+    padding: 75px 20px;
+    background: #131913;
+    color: white
+}
+
+.partner-promo h2 {
+    font-size: 32px;
+    margin-bottom: 15px
+}
+
+.partner-promo p {
+    margin-bottom: 25px;
+    color: #d6dfd2
+}
+
+body.pagina-login,
+body.pagina-login main {
+    min-height: 0
+}
+
+body.pagina-login .login-main {
+    min-height: calc(100vh - 86px)
+}
+
+body .construcao {
+    min-height: calc(100vh - 86px)
+}
+
+@media(max-width:1100px) {
+    .site-nav {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 9px;
+        padding: 9px 12px
+    }
+
+    .site-brand img {
+        width: 130px;
+        height: 42px
+    }
+
+    .site-links {
+        order: 3;
+        flex-basis: 100%;
+        gap: 14px
+    }
+
+    .site-nav {
+        min-height: 110px
+    }
+
+    body {
+        padding-top: 110px !important
+    }
+}
+
+@media(max-width:600px) {
+    .site-nav {
+        gap: 7px
+    }
+
+    .site-brand img {
+        width: 110px;
+        height: 40px
+    }
+
+    .site-account {
+        gap: 8px
+    }
+
+    .site-account a {
+        font-size: 12px
+    }
+
+    .site-account .site-register {
+        padding: 9px
+    }
+
+    .site-links {
+        gap: 10px
+    }
+
+    .site-links a {
+        font-size: 11px
+    }
+
+    body {
+        padding-top: 116px !important
+    }
+
+    .site-nav {
+        min-height: 116px
+    }
+}
+
+.pagina-topo,
+.pecas-destaque {
+    background-image: linear-gradient(#000c, #000c), url("../assets/backgroundImageHome.jpg") !important
+}

@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bicicletarias Parceiras | Avance BikeShop</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../../src/unificado.css">
+</head>
+
+<body>
+    <header class="site-header">
+        <nav class="site-nav" aria-label="Navegação principal"><a class="site-brand" href="../../index.html"><img
+                    src="../../assets/logo.png" alt="Avance BikeShop"></a>
+            <div class="site-links"><a href="../../index.html">Início</a><a
+                    href="../../em-construcao.html">Bicicletas</a><a href="../../pages/pecas/index.html">Peças</a><a
+                    href="../../pages/bicicletarias/index.html" aria-current="page">Bicicletarias</a><a
+                    href="../../em-construcao.html">Serviços</a><a href="../../em-construcao.html">Sobre nós</a></div>
+            <div class="site-account"><a href="../../pages/login/index.html">Entrar</a><a class="site-register"
+                    href="../../pages/cadastro/index.html">Cadastrar-se</a></div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="wrap"><span class="eyebrow">REDE DE PARCEIROS</span>
+                <h1>Encontre sua próxima <em>bicicletaria.</em></h1>
+                <p>Explore lojas, endereços e catálogos de peças e acessórios em um só lugar.</p><a class="btn"
+                    href="#cadastro">+ Adicionar bicicletaria</a>
+            </div>
+        </section>
+        <section class="wrap section" id="lojas">
+            <div class="section-heading">
+                <div><span class="eyebrow">EXPLORAR</span>
+                    <h2>Bicicletarias cadastradas</h2>
+                </div><input id="busca" type="search" placeholder="Buscar por nome ou endereço..."
+                    aria-label="Buscar bicicletarias">
+            </div>
+            <div id="lista" class="grid"></div>
+            <p id="vazio" class="empty" hidden>Nenhuma bicicletaria encontrada. Cadastre a primeira!</p>
+        </section>
+        <section class="form-section" id="cadastro">
+            <div class="wrap"><span class="eyebrow">FAÇA PARTE</span>
+                <h2>Adicionar bicicletaria</h2>
+                <p class="muted">Preencha os dados da loja e adicione os produtos do catálogo.</p>
+                <form id="formLoja">
+                    <div class="fields"><label>Nome da bicicletaria *<input name="nome" required maxlength="100"
+                                placeholder="Ex.: Bike Center"></label><label>Telefone / WhatsApp<input name="telefone"
+                                maxlength="30" placeholder="(11) 99999-9999"></label><label class="wide">Endereço
+                            completo *<input name="endereco" required maxlength="200"
+                                placeholder="Rua, número, bairro, cidade - UF"></label></div>
+                    <div class="catalog-head">
+                        <h3>Catálogo de produtos</h3><button type="button" class="btn secondary" id="addProduto">+
+                            Adicionar produto</button>
+                    </div>
+                    <div id="produtosForm"></div><button type="submit" class="btn submit">Salvar bicicletaria</button>
+                    <p id="mensagem" role="status"></p>
+                </form>
+            </div>
+        </section>
+    </main>
+    <footer>© 2026 Avance BikeShop. Todos os direitos reservados.</footer>
+    <dialog id="catalogoDialog">
+        <div class="dialog-top">
+            <div><span class="eyebrow">CATÁLOGO</span>
+                <h2 id="dialogTitulo"></h2>
+            </div><button id="fecharDialog" class="close" aria-label="Fechar">×</button>
+        </div>
+        <p id="dialogEndereco" class="muted"></p>
+        <div id="dialogProdutos" class="catalog-grid"></div>
+    </dialog>
+    <script src="script.js"></script>
+</body>
+
+</html>
